@@ -5,7 +5,6 @@ class OrderPageLocators:
     ORDER_BUTTON_TOP = (By.CLASS_NAME, "Button_Button__ra12g")
     ORDER_BUTTON_DOWN = (By.XPATH, "//div[contains(@class, 'Home_FinishButton__1_cWm')]//button")
     NEXT_BUTTON = (By.XPATH, "//button[text() = 'Далее']")
-
     NAME_INPUT = (By.XPATH, "//input[@placeholder = '* Имя']")
     LASTNAME_INPUT = (By.XPATH, "//input[@placeholder = '* Фамилия']")
     ADDRESS_INPUT = (By.XPATH, "//input[@placeholder = '* Адрес: куда привезти заказ']")

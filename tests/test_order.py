@@ -1,14 +1,14 @@
+# test_order.py
 import allure
 import pytest
-from data import Data
+from data import OrderTestData, Data
 from pages.order_page import OrderPage
 
 class TestOrder:
     @allure.title('Проверка заказа самоката')
     @pytest.mark.parametrize(
         ("name", "lastname", "address", "phone", "metro"),
-        [("Михаил", "Черный", "ул. Пушкина, д. 55", "89992921144", "Красные ворота"),
-        ("Юлия", "Снежкова", "ул. Колотушкина, д. 10", "89992921155", "Речной вокзал")])
+        OrderTestData.ORDER_TEST_DATA)  # используем данные из OrderTestData
     def test_order(self, driver, name, lastname, address, phone, metro):
         order_page = OrderPage(driver)
         order_page.click_on_cookie_button()
